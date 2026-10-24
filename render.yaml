@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: opd-saathi
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: STAFF_PIN
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+      - key: QUEUE_ALERT_THRESHOLD
+        value: "12"
+    disk:
+      name: opd-saathi-data
+      mountPath: /var/data
+      sizeGB: 1

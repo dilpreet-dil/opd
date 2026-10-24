@@ -1,0 +1,232 @@
+/* Showcase-inspired layout: compact side panels, calm blue surfaces, and visible hospital backdrop. */
+:root{--ref-blue:#2f6ee5;--ref-blue-deep:#1746a0;--ref-ink:#13254a;--ref-muted:#61718e;--ref-line:#d9e4f5;--ref-panel:#f8fbffed;--ref-shadow:0 16px 42px #183b701c}
+body{background:#eaf2ff;color:var(--ref-ink)}
+.app{position:relative;max-width:none;min-height:100vh;padding:12px clamp(12px,3vw,46px) 20px}
+.app>header{position:sticky;top:8px;z-index:20;width:min(100%,1480px);min-height:58px;margin:0 auto;padding:8px 15px;border:1px solid #e5edfa;border-radius:17px;background:#ffffffed;color:var(--ref-ink);box-shadow:0 8px 28px #193b701b;backdrop-filter:blur(16px)}
+.brand{color:#173d86}.brand svg{color:#286be0}.task-nav{gap:5px}.task-nav a{padding:8px 10px;border-radius:10px;color:#3d5279;font-size:.82rem;font-weight:750;text-decoration:none;transition:background .2s,color .2s,transform .2s}.task-nav a:hover,.task-nav a:focus-visible{background:#eaf1ff;color:#215cca;transform:translateY(-1px)}
+.head-actions select{border:1px solid #d9e3f1;border-radius:11px;background:white;color:#263b62}.emergency-top{padding:9px 13px;border-radius:12px;background:#fff0ed;color:#bd3434;box-shadow:none}.emergency-top:hover{background:#ffe5e0}
+.app main{position:relative;width:min(100%,1440px);min-height:0;margin:16px auto 18px;padding:clamp(14px,2vw,26px);border:1px solid #ffffffd9;border-radius:24px;background:#f7faffce;box-shadow:var(--ref-shadow);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px)}
+.app>footer{position:relative;z-index:4;width:max-content;max-width:100%;margin:10px auto 0;padding:10px 16px;border:1px solid #fff;border-radius:16px;background:#ffffffeb;box-shadow:0 10px 28px #1638651a;backdrop-filter:blur(14px)}.app>footer a{padding:7px 12px;border-radius:10px;color:#30578e;font-weight:750}.app>footer a:hover{background:#edf4ff}
+.page-title{margin:0 0 12px}.page-title h1{color:#172c55;letter-spacing:-.035em}.eyebrow{color:#667d9f}.card,.question,.settings,.emergency-card{border-color:#e1e9f5;background:#ffffffec;box-shadow:0 10px 28px #23497812}.btn{border-color:#d7e2f1;color:#244473;background:#fff;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 9px 20px #204b831d}.btn.primary,.welcome-cta,.resume-primary{border-color:#286ce0;background:linear-gradient(120deg,#397cef,#2461d1);color:white}
+.page-banner{overflow:hidden;min-height:174px;border:1px solid #ffffff;border-radius:22px;background-color:#dceaff;box-shadow:var(--ref-shadow)}.page-banner figcaption{max-width:78%;padding:15px 17px;border:1px solid #ffffffb8;border-radius:16px;background:#fffffff0;box-shadow:0 8px 24px #17396218;backdrop-filter:blur(12px)}.page-banner figcaption>b{color:#153460}
+.welcome{overflow:hidden;border:1px solid #ffffff;border-radius:24px;box-shadow:var(--ref-shadow)}.welcome-copy{max-width:52%;padding:clamp(22px,4vw,52px)}.welcome h1{color:#133466}.welcome-art{inset:0 0 0 42%;border-radius:0}.welcome-badge{border:1px solid #fff;background:#fffffff0;color:#35547f}.home-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.home-grid .btn{min-height:66px;border-radius:16px;font-size:.94rem}.home-grid .btn:nth-child(3){background:#eff5ff;color:#2458ae;border-color:#d8e5fa}.home-grid .emergency-button{background:#fff1ef;color:#bd3535;border-color:#f2d5d1}.quick-route-panel,.visit-resume,.care-showcase{border:1px solid #fff;background:#ffffffec;box-shadow:0 10px 27px #20487612}.quick-route-chip{border-color:#dbe6f4;background:#f8fbff}.quick-route-chip>span{background:#eaf1ff;color:#326fe0}.notice{border-color:#f0dba5;background:#fff9e9;color:#645533}
+/* Compact panels live on one side so the ambient hospital scene remains visible. */
+.app main:has(.registration-page){width:min(100%,1380px);margin-left:max(14px,3vw);margin-right:auto}.registration-page{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(260px,.62fr);align-items:start;column-gap:clamp(14px,2.2vw,30px)}.registration-page>.page-title{grid-column:1/-1;grid-row:1}.registration-page>.page-banner{grid-column:2;grid-row:2/8;height:100%;min-height:470px;margin:0;background-position:center;background-size:cover}.registration-page>.progress{grid-column:1;grid-row:2}.registration-page>.switch{grid-column:1;grid-row:3;justify-self:start;padding:8px 13px;border:1px solid #e1eaf7;border-radius:13px;background:#ffffffd9;color:#39557c}.registration-page>.notice{grid-column:1;grid-row:4}.registration-page>.question{grid-column:1;grid-row:5;min-height:190px;padding:clamp(16px,2.2vw,28px)}.registration-page>.row{grid-column:1;grid-row:6;margin:4px 0}.registration-page>.notice.compact{grid-column:1;grid-row:7;margin-top:0;padding:12px 15px}.registration-page>.urgent-button{grid-column:1;grid-row:8;margin:4px 0}
+.registration-page>.progress{padding:12px 14px;border:1px solid #deE8f7;border-radius:15px;background:#fff;box-shadow:0 8px 22px #264c7910}.registration-page>.progress span{display:block;margin-bottom:8px;color:#4d6284;font-weight:800}.registration-page>.progress>div{height:8px;background:#e7edf7}.registration-page>.progress i{border-radius:9px;background:linear-gradient(90deg,#76c9a3,#347ae7);transition:width .35s ease}.registration-page .question h2{color:#233b66}.registration-page .mic{display:inline-grid;place-items:center;width:48px;height:48px;margin:11px 0 0;background:linear-gradient(145deg,#4d9fda,#2869c8);box-shadow:0 7px 17px #2869c833}.registration-page .mic svg{width:22px;height:22px;margin:0}.registration-page .doctor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.registration-page .doctor-card{min-height:90px;border-color:#dce6f4;border-radius:13px;background:#f8fbff}.registration-page .doctor-card.selected{outline:2px solid #3879e4;background:#edf4ff}.registration-page .row .btn{min-height:48px}
+/* Emergency has clear emergency actions on the left and the route photo on the right. */
+.app main:has(.emergency-card){display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.72fr);align-items:start;gap:12px 22px}.app main:has(.emergency-card)>.page-banner{grid-column:2;grid-row:1/6;height:100%;min-height:390px;margin:0;background-position:center;background-size:cover}.app main:has(.emergency-card)>.emergency-card{grid-column:1;grid-row:1/6;margin:0;padding:clamp(15px,2vw,24px);text-align:left}.emergency-card>.hero-icon{float:right;padding:13px}.emergency-card>h1{margin-top:0;color:#a72d31}.emergency-card .lead{max-width:54ch}.emergency-triage{margin-top:15px;padding:16px;border:1px solid #f0dddd;border-radius:18px;background:linear-gradient(145deg,#fff9f8,#fff)}.emergency-triage-heading h2{margin:5px 0;font-size:1.16rem}.emergency-triage-heading p{margin:0 0 11px;color:#6e6872;font-size:.86rem}.symptom-grid{gap:8px}.symptom-grid button{min-height:54px;border:1px solid #eadedf;border-radius:12px;background:#fff;color:#59464a}.symptom-grid button:hover,.symptom-grid button.selected{border-color:#df7873;background:#fff0ee;color:#a92e34}.alert-staff-button{min-height:50px;border-radius:13px;background:linear-gradient(110deg,#dc4d4b,#b82e39);box-shadow:0 8px 18px #b9303930}.emergency-card>h2{margin-top:18px;font-size:1.06rem}.emergency-card>.floor-map{max-height:240px;border:1px solid #e3e9ef;background:#f9fbff}.emergency-card>.emergency-numbers{justify-content:flex-start;gap:9px;margin-top:11px}.emergency-numbers a{min-width:118px;min-height:46px;justify-content:center;border:1px solid #f1d6d3;border-radius:12px;background:#fff5f3;font-size:1.1rem}.emergency-card>.danger{margin-bottom:0}
+/* Settings: distinct, scannable control tiles with direct labels. */
+.settings-page{max-width:890px;margin:0 auto 0 max(0px,3vw)}.settings-page>.page-title{margin-bottom:14px}.settings-page>.settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:clamp(14px,2vw,22px)}.settings-page>.settings>label{min-width:0;margin:0;padding:14px;border:1px solid #e0e9f5;border-radius:15px;background:linear-gradient(145deg,#fff,#f7faff);color:#334c71;font-weight:750}.settings-page>.settings>label select{width:100%;margin-top:8px;border-color:#d7e3f2}.settings-page>.settings>label input[type=range]{width:100%;accent-color:#3479e6}.settings-page>.settings>label.switch{display:flex;align-items:center;gap:11px;min-height:66px}.settings-page>.settings>label.switch input{width:20px;height:20px;accent-color:#3479e6}.settings-page>.settings>.install-button{grid-column:1/-1;width:100%}.settings-page>.urgent-button{max-width:520px}
+/* Navigation's floor cards echo the floor picker in the supplied reference. */
+.app main:has(.navigation-game){width:min(100%,1520px);padding:clamp(12px,1.6vw,22px)}.navigation-game{overflow:hidden;border:1px solid #ffffff;background:#f8fbffdb;box-shadow:var(--ref-shadow)}.navigation-game-head{padding:12px 14px}.navigation-game-head h2{margin:3px 0;color:#172f5b}.wayfinder{--wf-ink:#21365e;--wf-muted:#697b98;--wf-green:#238c78;--wf-blue:#3275df}.wf-floor-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:10px 0 13px}.wf-floor-card{display:grid;grid-template-columns:38px minmax(0,1fr) 60px;align-items:center;gap:9px;min-height:77px;padding:10px;border:1px solid #dce6f4;border-radius:15px;background:#ffffffed;color:#233b66;text-align:left;cursor:pointer;transition:transform .2s,border .2s,box-shadow .2s,background .2s}.wf-floor-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #24569a18}.wf-floor-card.active{border-color:#74a0ee;background:linear-gradient(115deg,#eef5ff,#fff);box-shadow:0 0 0 2px #3e7de822,0 8px 20px #24569a12}.wf-floor-number{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:#edf3fc;color:#4b6288;font-size:.92rem;font-weight:900}.wf-floor-card.active .wf-floor-number{background:#3275df;color:#fff}.wf-floor-copy{display:grid;gap:3px;min-width:0}.wf-floor-copy b{font-size:.8rem}.wf-floor-copy small{overflow:hidden;color:#72809a;font-size:.61rem;line-height:1.25;text-overflow:ellipsis;white-space:nowrap}.wf-floor-plan{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3px;width:58px;height:44px;padding:4px;border:1px solid #cbd8e9;border-radius:8px;background:#f5f8fc;transform:perspective(80px) rotateX(5deg)}.wf-floor-plan i{border-radius:2px;background:#dce8fa}.wf-floor-plan i:nth-child(2){background:#cdeee4}.wf-floor-plan i:nth-child(3){background:#f7e6bc}.wf-floor-plan i:nth-child(4){background:#e9dcf8}.wf-floor-plan em{position:absolute;left:48%;top:4px;bottom:4px;width:4px;border-radius:5px;background:#fff;box-shadow:0 0 0 1px #d0dbea}
+.wf-mode-switch button{border-color:#d7e4f5;color:#36577e}.wf-mode-switch button.active{border-color:#286de0;background:linear-gradient(120deg,#397cef,#2461d1);box-shadow:0 5px 14px #286de033}.h3d-floor-menu button{border-color:#dce5f3;background:#fff;color:#456287}.h3d-floor-menu button.active{background:#3478df;color:#fff}.wf-floor-switch button.selected{background:#3478df;color:#fff}.wf-map-card{border:1px solid #dce7f3;border-radius:18px;background:#fff}.wf-map-toolbar{background:#f8fbff}.wf-floor-svg{max-height:62vh}
+.page-banner,.welcome,.card,.settings,.question,.navigation-game,.quick-route-panel,.visit-resume,.care-showcase,.board-department{animation:ref-enter .38s cubic-bezier(.2,.7,.2,1) both}@keyframes ref-enter{from{opacity:.45;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:820px){.app{padding:8px 10px 14px}.app>header{flex-wrap:wrap;gap:7px}.task-nav{order:3;width:100%;overflow:auto}.task-nav a{white-space:nowrap}.app main,.app main:has(.navigation-game){width:100%;margin:10px auto;padding:12px}.registration-page{grid-template-columns:minmax(0,1fr) minmax(190px,.55fr);gap:10px}.registration-page>.page-banner{min-height:390px}.app main:has(.emergency-card){grid-template-columns:minmax(0,1fr) minmax(190px,.58fr);gap:10px}.wf-floor-deck{gap:6px}.wf-floor-card{grid-template-columns:32px minmax(0,1fr);min-height:72px;padding:8px}.wf-floor-number{width:31px;height:31px}.wf-floor-plan{display:none}}
+@media(max-width:600px){.app{padding:7px 8px 12px}.app>header{top:4px;padding:8px 10px}.head-actions{margin-left:auto}.head-actions select{min-height:40px}.emergency-top{min-height:40px;font-size:.8rem}.task-nav{gap:2px}.task-nav a{padding:7px 8px;font-size:.73rem}.app main,.app main:has(.navigation-game){padding:10px;border-radius:19px}.app>footer{width:100%;justify-content:space-around;padding:8px 5px}.app>footer a{gap:4px;padding:7px;font-size:.75rem}.welcome{min-height:250px}.welcome-copy{max-width:75%;padding:23px 17px}.welcome-art{left:34%;opacity:.7}.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-grid .btn{min-height:57px;font-size:.84rem}.registration-page{display:flex;flex-direction:column;align-items:stretch}.registration-page>.page-title{order:0}.registration-page>.page-banner{order:1;width:100%;height:170px;min-height:170px;background-position:center 42%}.registration-page>.progress{order:2;width:100%}.registration-page>.switch{order:3}.registration-page>.question{order:4;width:100%;min-height:0}.registration-page>.row{order:5;width:100%}.registration-page>.notice{order:6;width:100%}.registration-page>.urgent-button{order:7;width:100%}.registration-page .doctor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.app main:has(.emergency-card){display:flex;flex-direction:column}.app main:has(.emergency-card)>.page-banner{order:0;width:100%;height:155px;min-height:155px}.app main:has(.emergency-card)>.emergency-card{order:1;width:100%;padding:14px}.settings-page{margin:0}.settings-page>.settings{grid-template-columns:1fr;padding:11px}.settings-page>.settings>.install-button{grid-column:auto}.wf-floor-deck{grid-template-columns:repeat(3,minmax(126px,1fr));overflow-x:auto;padding:2px 0 6px}.wf-floor-card{min-height:67px}.wf-floor-copy small{max-width:100px}.page-banner{min-height:142px}}
+ .registration-help{display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:8px 10px;border:1px solid #d7e5f7;border-radius:10px;background:#f1f6ff;color:#2e62b3;font-size:.82rem;font-weight:800;cursor:pointer}.registration-help:hover{background:#e6efff}.emergency-card>.emergency-route-link{display:inline-flex;align-items:center;gap:8px;min-height:43px;margin-top:8px;padding:8px 12px;border:1px solid #d5e2f5;border-radius:12px;background:#edf4ff;color:#285eae;font-size:.82rem;font-weight:800;text-decoration:none}.emergency-numbers a span{display:grid;text-align:left}.emergency-numbers a small{color:#95696a;font-size:.57rem;font-weight:700}.emergency-numbers a b{color:#a92e34;font-size:1.03rem}
+
+/* Route-aware 3D models live beside compact content; each route changes its model, palette and atmosphere. */
+.app{overflow-x:clip}.medical-scene{position:fixed;z-index:1;top:118px;right:2.7vw;bottom:82px;width:34vw;max-width:540px;min-width:335px;overflow:hidden;border:1px solid #ffffffba;border-radius:30px;background:radial-gradient(ellipse at 52% 37%,var(--scene-pale),#fff9 56%,#ffffff52 78%),linear-gradient(145deg,#fffef8c9,#e8f0f7b8);box-shadow:0 24px 70px #183f4720;pointer-events:none;isolation:isolate;animation:scene-arrive .48s ease both;transition:background .5s ease,border-color .5s ease}
+.medical-scene[data-scene=emergency]{background:radial-gradient(ellipse at 52% 37%,#fff0ed,#fff9 57%,#ffffff50 79%),linear-gradient(145deg,#fffaf8,#f8e8e6)}.medical-scene[data-scene=settings]{background:radial-gradient(ellipse at 52% 37%,#f0ebfc,#fff9 57%,#ffffff50 79%),linear-gradient(145deg,#fff,#edeafa)}.medical-scene[data-scene=register]{background:radial-gradient(ellipse at 52% 37%,#e7f6ef,#fff9 57%,#ffffff50 79%),linear-gradient(145deg,#fcfffb,#e8f5ee)}.medical-scene[data-scene=find]{background:radial-gradient(ellipse at 52% 37%,#e8f2ff,#fff9 57%,#ffffff50 79%),linear-gradient(145deg,#fbfdff,#e5edfb)}.medical-scene[data-scene=slip],.medical-scene[data-scene=queue]{background:radial-gradient(ellipse at 52% 37%,#edf0ff,#fff9 57%,#ffffff50 79%),linear-gradient(145deg,#fff,#e7ecfa)}
+.medical-scene-glow{position:absolute;inset:15% 6% 28%;z-index:-1;border-radius:50%;background:radial-gradient(ellipse,#fff 0%,var(--scene-pale) 48%,transparent 75%);filter:blur(9px);animation:scene-glow 6s ease-in-out infinite alternate}.medical-scene-orbit{position:absolute;left:50%;top:38%;width:72%;aspect-ratio:1;border:1px solid #ffffffbd;border-radius:50%;transform:translate(-50%,-50%) rotate(-18deg);animation:scene-orbit 18s linear infinite}.medical-scene-orbit:after{position:absolute;top:15%;left:6%;width:8px;height:8px;border-radius:50%;background:var(--scene-accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--scene-accent) 14%,transparent);content:""}.medical-scene-orbit.orbit-two{width:88%;border-color:#ffffff80;transform:translate(-50%,-50%) rotate(46deg);animation-duration:27s;animation-direction:reverse}.medical-scene-orbit.orbit-two:after{top:76%;left:auto;right:8%;width:6px;height:6px;background:#d6ad75}
+.medical-scene-model{position:absolute;inset:5% 2% 27%;z-index:1}.medical-scene-model canvas{display:block;width:100%;height:100%}.medical-scene-copy{position:absolute;right:8%;bottom:11%;left:8%;z-index:2;padding:17px 19px;border:1px solid #ffffffc9;border-radius:18px;background:#ffffffdc;box-shadow:0 12px 34px #203c5914;backdrop-filter:blur(13px)}.medical-scene-copy>span{display:flex;align-items:center;gap:7px;color:#6b7e96;font-size:.59rem;font-weight:850;letter-spacing:.13em}.medical-scene-copy>span i{width:7px;height:7px;border-radius:50%;background:var(--scene-accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--scene-accent) 15%,transparent)}.medical-scene-copy h2{margin:7px 0 3px;color:#1e355c;font-size:clamp(1.08rem,1.8vw,1.42rem);letter-spacing:-.035em}.medical-scene-copy p{margin:0;color:#687a94;font-size:.78rem;line-height:1.5}.medical-scene-caption{position:absolute;right:9%;bottom:4%;left:9%;display:flex;justify-content:space-between;color:#78869a;font-size:.65rem;font-weight:750}.medical-scene-caption b{color:var(--scene-accent)}
+@keyframes scene-arrive{from{opacity:0;transform:translateX(16px) scale(.99)}to{opacity:1;transform:translateX(0) scale(1)}}@keyframes scene-orbit{to{transform:translate(-50%,-50%) rotate(342deg)}}@keyframes scene-glow{to{opacity:.68;transform:scale(1.07)}}
+@media(min-width:761px){.app main{position:relative;z-index:2;width:min(61vw,850px);margin:14px 0 24px clamp(20px,3.4vw,52px);padding:clamp(14px,1.8vw,23px);background:#f9fbfff0}.app main:has(.navigation-game){width:min(61vw,900px);margin:14px 0 22px clamp(15px,2vw,30px);padding:13px;background:#f8fbfff2}.app main:has(.staff-dashboard),.app main:has(.board-live){width:min(94vw,1480px);margin:15px auto 24px;background:#f8fbfff2}.app main:has(.staff-dashboard)~.medical-scene,.app main:has(.board-live)~.medical-scene{opacity:.12}.registration-page{grid-template-columns:1fr}.registration-page>.page-banner{display:none}.app main:has(.emergency-card){grid-template-columns:1fr}.app main:has(.emergency-card)>.page-banner{display:none}.settings-page{max-width:none;margin:0}.app main:has(.settings-page){width:min(61vw,800px)}.app:has(.medical-scene) .ambient-video{opacity:.17}.app>footer{right:auto;left:clamp(20px,3.4vw,52px);z-index:10}}
+@media(max-width:760px){.medical-scene{position:relative;top:auto;right:auto;bottom:auto;width:calc(100% - 20px);min-width:0;max-width:none;height:220px;margin:9px auto 10px;border-radius:23px}.medical-scene-model{inset:0 2% 24%;}.medical-scene-copy{right:5%;bottom:8%;left:5%;padding:10px 13px}.medical-scene-copy>span{font-size:.51rem}.medical-scene-copy h2{margin:4px 0 2px;font-size:1rem}.medical-scene-copy p{font-size:.67rem}.medical-scene-caption{display:none}.medical-scene-orbit{top:37%;width:48%;}.medical-scene-orbit.orbit-two{width:62%}.app main{position:relative;z-index:2;width:calc(100% - 18px);margin:8px auto 15px;background:#f9fbfff0}.app main:has(.navigation-game){width:calc(100% - 12px);margin:8px auto 14px;padding:8px;background:#f9fbfff4}.registration-page{display:flex;flex-direction:column}.registration-page>.page-banner{display:none}.app main:has(.emergency-card){display:flex}.app main:has(.emergency-card)>.page-banner{display:none}.app:has(.medical-scene) .ambient-video{opacity:.12}}
+@media(prefers-reduced-motion:reduce){.medical-scene,.medical-scene-orbit,.medical-scene-glow{animation:none!important}}
+.medical-scene-loading{position:fixed;z-index:1;top:118px;right:2.7vw;bottom:82px;width:34vw;max-width:540px;min-width:335px;border:1px solid #ffffffba;border-radius:30px;background:linear-gradient(145deg,#f5f9ffdd,#e9f2f9aa)}
+@media(max-width:760px){.medical-scene-loading{position:relative;top:auto;right:auto;bottom:auto;width:calc(100% - 20px);min-width:0;height:170px;margin:9px auto;border-radius:23px}}
+@media(max-width:760px){.medical-scene{position:absolute;top:98px;right:10px;bottom:auto;left:10px;width:auto;height:194px;margin:0}.medical-scene-loading{position:absolute;top:98px;right:10px;bottom:auto;left:10px;width:auto;height:170px;margin:0}.app main{margin-top:207px}.app main:has(.navigation-game){margin-top:207px}.app main:has(.emergency-card){margin-top:207px}}
+@media(min-width:761px){.medical-scene{width:30vw;min-width:260px;max-width:540px}.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){width:min(61vw,850px);margin:14px 0 22px clamp(20px,3.4vw,52px)}.app main:has(.registration-page){display:block}.app main:has(.staff-dashboard),.app main:has(.board-live){width:min(94vw,1480px);margin:15px auto 24px}.app:has(.staff-dashboard) .medical-scene,.app:has(.board-live) .medical-scene{opacity:.15}}
+@media(min-width:761px) and (max-width:1000px){.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){width:61vw;margin-left:2.5vw}.medical-scene{width:28vw;min-width:250px;right:2vw}}
+@media(max-width:760px){.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){width:calc(100% - 18px);margin:207px auto 15px}.app main:has(.navigation-game){width:calc(100% - 12px);margin:207px auto 14px}}
+@media(min-width:761px){.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){width:min(61vw,850px)!important;margin-left:clamp(18px,2.5vw,44px)!important;margin-right:auto!important}}
+@media(max-width:760px){.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){width:calc(100% - 18px)!important;margin:207px auto 15px!important}}
+.app main:has(.navigation-game)>.page-banner{display:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+html[data-motion=yes] *,html[data-motion=yes] *::before,html[data-motion=yes] *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+
+/* Keep notices and controls in normal flow so status banners never cover forms. */
+.connection-banner{position:relative;z-index:5;display:block;width:min(100% - 36px,1480px);margin:12px auto 18px;padding:11px 16px;border:1px solid #cfe3db;border-radius:14px;background:#f4fbf7ed;color:#315f55;line-height:1.45;box-shadow:0 7px 18px #23497810}
+
+/* The waiting board is a full-width information screen, so keep its 3D side scene off-canvas. */
+.app:has(.board-live) .medical-scene,.app:has(.board-live) .medical-scene-loading{display:none!important}
+.app:has(.board-live) main{box-sizing:border-box;width:min(96vw,1580px)!important;max-width:1580px;margin:12px auto 22px!important}
+.board-actions{align-items:center;flex-wrap:wrap;min-width:0}
+.board-actions>div:first-child{display:grid;flex:1 1 280px;min-width:0;gap:4px;align-content:center}
+.board-actions>div:first-child p,.board-announce-status{min-width:0;max-width:100%;margin:0;overflow-wrap:anywhere;white-space:normal;line-height:1.45}
+.board-announce-controls{display:flex;flex:1 1 380px;flex-wrap:wrap;justify-content:flex-end;min-width:0}
+@media(max-width:760px){.board-announce-controls{width:100%;justify-content:stretch}.board-announce-controls .board-announce{flex:1 1 145px}.board-actions>div:first-child{flex-basis:100%}}
+
+/* Keep the 3D care illustration visible on the slip-entry page only at desktop sizes. */
+@media(min-width:761px){
+ .app:has(.slip-lookup) main{box-sizing:border-box;width:min(52vw,780px)!important;max-width:780px;margin:14px auto 22px clamp(18px,2.5vw,44px)!important}
+ .app:has(.slip-lookup) .medical-scene{display:block;position:fixed;z-index:1;top:118px;right:clamp(20px,4vw,64px);bottom:82px;left:auto;width:min(34vw,500px);min-width:270px;max-width:500px;opacity:1!important}
+}
+.slip-lookup{display:flex;flex-direction:column;align-items:stretch;gap:12px;min-width:0}
+.slip-lookup>p{margin:0;line-height:1.5}
+.slip-lookup>label{display:block;width:100%;margin:0;line-height:1.45}
+.slip-lookup>label input{margin-top:8px}
+.slip-lookup>.btn,.slip-lookup>.qr-scan-button{align-self:flex-start;min-width:min(100%,180px);margin:2px 0 0}
+.slip-lookup>.qr-scan-button{display:inline-flex;align-items:center;justify-content:center;gap:9px}
+.app:has(.slip-lookup) .page-title h1{padding-left:9px}
+.slip-steps{margin:12px 0 15px;padding:14px;border:1px solid #dce8f3;border-radius:17px;background:linear-gradient(145deg,#f8fbffed,#ffffffeb);box-shadow:0 8px 20px #2349780b}
+.slip-steps h2{margin:0 0 9px;color:#27466e;font-size:.93rem}
+.slip-steps ol{display:grid;gap:7px;margin:0;padding:0;list-style:none}
+.slip-steps li{display:grid;grid-template-columns:28px minmax(0,1fr);align-items:start;gap:9px;padding:8px;border:1px solid #e5edf6;border-radius:12px;background:#ffffffc9}
+.slip-steps li>b{display:grid;place-items:center;width:27px;height:27px;border-radius:9px;background:#eaf2ff;color:#2d6fd0;font-size:.75rem}
+.slip-steps li span{display:grid;gap:2px;min-width:0}
+.slip-steps li strong{color:#345474;font-size:.76rem;line-height:1.3}
+.slip-steps li small{color:#708399;font-size:.7rem;line-height:1.4;overflow-wrap:anywhere}
+.settings-page>.page-title{display:flex;align-items:center;justify-content:flex-end;gap:10px;min-height:48px;margin:0 0 18px;padding:4px 6px 12px}
+.settings-page>.page-title h1{flex:1;margin:0!important;text-align:right!important}
+.settings-page>.settings{row-gap:14px}
+.settings-page>.urgent-button{margin-top:16px}
+.welcome-copy{position:relative;z-index:1;width:min(62%,610px);max-width:610px}
+.welcome-art{pointer-events:none}
+.care-showcase,.care-grid{min-width:0}
+.care-grid article{min-width:0;overflow:hidden}
+.care-grid article img{max-width:100%}
+@media(max-width:760px){
+ .connection-banner{width:calc(100% - 20px);margin:10px auto 14px;padding:10px 12px;font-size:.88rem}
+ .app main{min-width:0;max-width:100%;overflow:visible}
+ .welcome{min-height:260px;padding:20px 16px 48px;background-position:center}
+ .welcome-copy{width:min(100%,520px);max-width:100%;padding:10px 8px}
+ .welcome-copy h1{max-width:100%;font-size:clamp(2.15rem,11vw,3.3rem);overflow-wrap:anywhere}
+ .welcome-copy>p:not(.eyebrow){max-width:34ch}
+ .welcome-art{display:none}
+ .welcome-badge{right:12px;bottom:10px;transform:none!important}
+ .care-showcase{width:100%;padding:12px}
+ .care-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(92px,28vw,132px);gap:9px}
+ .care-grid article:nth-child(1),.care-grid article:nth-child(4){grid-row:span 1}
+ .care-grid article>div{left:8px;right:8px;bottom:8px}
+ .care-grid b{font-size:.76rem;overflow-wrap:anywhere}
+ .care-grid small{font-size:.64rem}
+ .slip-lookup>.btn,.slip-lookup>.qr-scan-button{align-self:stretch;width:100%;min-height:48px}
+ .settings-page>.page-title{margin-bottom:16px;padding:4px 4px 12px}
+ .settings-page>.page-title h1{font-size:1.45rem}
+ .settings-page>.settings{gap:12px}
+ .medical-scene,.medical-scene-loading{position:relative;inset:auto;width:calc(100% - 20px);min-width:0;height:190px;margin:9px auto 10px}
+ .app main,.app main:has(.navigation-game),.app main:has(.registration-page),.app main:has(.emergency-card),.app main:has(.settings-page){margin:8px auto 15px!important}
+}
+@media(max-width:390px){
+ .app>header{width:calc(100% - 14px);padding:8px}
+ .brand{font-size:.9rem}
+ .head-actions select{max-width:78px;padding:6px}
+ .emergency-top{gap:4px;padding:7px;font-size:.7rem}
+ .task-nav a{padding:7px 6px;font-size:.68rem}
+ .home-grid{gap:8px}
+ .home-grid .btn{min-height:58px;padding:8px;font-size:.74rem}
+ .card{padding:15px}
+}
+
+/* Keep the home column clear of the fixed 3D showcase on desktop. */
+@media(min-width:761px){
+ .app:has(.welcome) main{box-sizing:border-box;width:min(56vw,900px)!important;max-width:900px!important;margin:14px 0 30px clamp(20px,3vw,48px)!important;padding:clamp(12px,1.7vw,24px)!important}
+ .app:has(.welcome) .welcome,.app:has(.welcome) .home-grid,.app:has(.welcome) .quick-route-panel,.app:has(.welcome) .visit-resume,.app:has(.welcome) .care-showcase,.app:has(.welcome) main>.notice,.app:has(.welcome) main>.urgent-button,.app:has(.welcome) main>.quicklinks{width:100%;max-width:100%;box-sizing:border-box}
+ .app:has(.welcome) .welcome-copy{width:min(72%,610px);max-width:610px}
+}
+.staff-waiting-visual{display:inline-flex;align-items:center;gap:4px;min-width:0;vertical-align:middle}
+.staff-waiting-person{position:relative;display:inline-grid;place-items:center;flex:none;width:27px;height:27px;border:1px solid #d8e6f5;border-radius:50%;background:#eef5fd;font-size:15px;line-height:1}
+.staff-waiting-person b{position:absolute;right:-4px;top:-5px;display:grid;place-items:center;width:13px;height:13px;border:1px solid white;border-radius:50%;background:#337bd4;color:white;font-size:8px;line-height:1}
+.staff-waiting-extra{color:#587495;font-size:.7rem;font-weight:800}
+.staff-waiting-visual>small{margin-left:3px;white-space:nowrap;color:#667d9f}
+.staff-table td .staff-waiting-visual{flex-wrap:nowrap}
+.board-person-avatar{font-size:18px;line-height:1}
+.board-person-ticket .board-person-number{color:#294f7a;font-size:.58rem}
+.board-person-ticket.is-next .board-person-number{color:#197b60}
+@media(max-width:760px){.app:has(.welcome) main{box-sizing:border-box;width:calc(100% - 18px)!important;max-width:100%!important;margin:8px auto 15px!important;padding:12px!important}.staff-waiting-person{width:23px;height:23px;font-size:13px}}
+@media(max-width:460px){.staff-waiting-visual{gap:2px}.staff-waiting-person{width:19px;height:19px;font-size:11px}.staff-waiting-person b{width:11px;height:11px;font-size:7px}.staff-waiting-visual>small{font-size:.62rem}}
+/* Tablet widths need a real gutter between the content column and the 3D panel. */
+@media(min-width:761px) and (max-width:1100px){
+ .app main:not(:has(.staff-dashboard)):not(:has(.board-live)){box-sizing:border-box;width:54vw!important;max-width:54vw!important;margin-left:2.5vw!important;padding:14px!important}
+ .app main:has(.navigation-game){width:54vw!important;max-width:54vw!important;margin-left:2vw!important}
+ .app:has(.welcome) main{width:54vw!important;max-width:54vw!important;margin-left:2.5vw!important}
+ .medical-scene,.medical-scene-loading{right:2vw;width:32vw;min-width:240px}
+ .app:has(.welcome) .home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .wf-floor-deck{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .wf-floor-card{grid-template-columns:34px minmax(0,1fr);gap:7px;padding:8px}
+ .wf-floor-plan{display:none}
+}
+.app:has(.welcome) .home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.app:has(.welcome) .home-grid .btn{box-sizing:border-box;width:100%;min-width:0;max-width:none;justify-self:stretch;white-space:normal;overflow-wrap:anywhere}
+.wf-floor-deck{grid-template-columns:repeat(3,minmax(0,1fr));min-width:0}
+.wf-floor-card{box-sizing:border-box;grid-template-columns:38px minmax(0,1fr) 60px;min-width:0}
+.wf-floor-copy{min-width:0;overflow:hidden}
+.wf-floor-copy b,.wf-floor-copy small{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:820px){
+ .wf-floor-deck{grid-template-columns:1fr;overflow:visible}
+ .wf-floor-card{grid-template-columns:38px minmax(0,1fr);width:100%;min-height:60px}
+ .wf-floor-plan{display:none}
+}
+@media(min-width:761px) and (max-width:1100px){.wf-floor-deck{grid-template-columns:1fr}.wf-floor-card{grid-template-columns:38px minmax(0,1fr);min-height:60px}.wf-floor-plan{display:none}}
+/* Give the slip form a wider, guaranteed gutter before the fixed 3D visit card. */
+@media(min-width:761px){.app main:has(.slip-lookup):not(:has(.staff-dashboard)):not(:has(.board-live)){box-sizing:border-box;width:min(50vw,780px)!important;max-width:780px!important;margin-left:clamp(18px,2.5vw,44px)!important;margin-right:auto!important}}
+@media(min-width:761px){.app main:has(.staff-gate-layout){box-sizing:border-box;width:min(92vw,1120px)!important;max-width:1120px!important;margin:clamp(42px,8vh,100px) auto 42px!important;padding:0!important}}
+@media(max-width:760px){.app main:has(.staff-gate-layout){box-sizing:border-box;width:calc(100% - 22px)!important;max-width:100%!important;margin:18px auto 26px!important;padding:0!important}}
+/* Wayfinding is the main visual on this screen; give it the whole canvas. */
+.app:has(.navigation-game) .medical-scene,
+.app:has(.navigation-game) .medical-scene-loading{display:none!important}
+.app main:has(.navigation-game){box-sizing:border-box;width:min(96vw,1500px)!important;max-width:1500px!important;margin:12px auto 22px!important;padding:clamp(12px,1.6vw,24px)!important}
+.navigation-game{border-radius:24px}
+.navigation-game-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(14px,2vw,24px)}
+.navigation-game-head h2{font-size:clamp(1.45rem,2.5vw,2.1rem);line-height:1.15;margin:5px 0 8px}
+.navigation-game-head p{max-width:720px;font-size:1rem;line-height:1.55}
+.game-mode-pill{flex:0 0 auto}
+.app:has(.navigation-game) .wayfinder{font-size:16px;margin-top:0}
+.app:has(.navigation-game) .wf-top{align-items:center}
+.app:has(.navigation-game) .wf-kicker{font-size:.78rem}
+.app:has(.navigation-game) .wf-top h2{font-size:1.4rem}
+.app:has(.navigation-game) .wf-top p{font-size:1rem;line-height:1.5}
+.app:has(.navigation-game) .wf-position{font-size:.9rem;padding:11px 14px}
+.app:has(.navigation-game) .wf-select>span{font-size:.95rem}
+.app:has(.navigation-game) .wf-select select,.app:has(.navigation-game) .wf-select input{min-height:56px;font-size:1rem}
+.app:has(.navigation-game) .wf-shortcuts button{min-height:50px;font-size:.95rem}
+.app:has(.navigation-game) .wf-access{min-height:56px;font-size:1rem}
+.app:has(.navigation-game) .wf-floor-card{min-height:80px}
+.app:has(.navigation-game) .wf-floor-copy b{font-size:.92rem}
+.app:has(.navigation-game) .wf-floor-copy small{font-size:.72rem}
+.app:has(.navigation-game) .wf-mode-switch button{min-height:48px;font-size:.95rem}
+.app:has(.navigation-game) .wf-map-toolbar button{min-height:46px;min-width:46px;font-size:.9rem}
+.app:has(.navigation-game) .wf-controls button{min-height:50px;font-size:.9rem}
+.app:has(.navigation-game) .wf-steps li{font-size:1rem;line-height:1.5}
+.app:has(.navigation-game) .wf-dpad{grid-template-columns:repeat(3,52px);grid-template-rows:52px 52px;gap:6px}
+.app:has(.navigation-game) .wf-dpad button{width:52px;height:52px}
+.app:has(.navigation-game) .wf-guidance{padding:clamp(14px,2vw,22px)}
+@media(min-width:761px){.app main:has(.navigation-game){margin-top:12px!important}}
+@media(max-width:760px){
+ .app main:has(.navigation-game){width:calc(100% - 16px)!important;max-width:100%!important;margin:9px auto 16px!important;padding:10px!important}
+ .navigation-game{border-radius:19px}
+ .navigation-game-head{align-items:flex-start;flex-direction:column;gap:10px;padding:13px 12px}
+ .navigation-game-head h2{font-size:1.4rem}
+ .navigation-game-head p{font-size:.95rem}
+ .game-mode-pill{white-space:normal;line-height:1.4}
+ .app:has(.navigation-game) .wf-top{align-items:flex-start;flex-direction:column;gap:8px}
+ .app:has(.navigation-game) .wf-search-row{grid-template-columns:1fr;gap:10px}
+ .app:has(.navigation-game) .wf-shortcuts{gap:7px}
+ .app:has(.navigation-game) .wf-shortcuts button{min-height:48px;padding:8px 11px}
+ .app:has(.navigation-game) .wf-floor-deck{grid-template-columns:1fr;overflow:visible}
+ .app:has(.navigation-game) .wf-floor-card{grid-template-columns:40px minmax(0,1fr);width:100%;min-height:68px}
+ .app:has(.navigation-game) .wf-floor-plan{display:none}
+ .app:has(.navigation-game) .wf-map-toolbar{align-items:flex-start;flex-wrap:wrap}
+ .app:has(.navigation-game) .wf-floor-switch{max-width:100%;width:100%}
+ .app:has(.navigation-game) .wf-floor-switch button{min-height:46px;font-size:.88rem}
+ .app:has(.navigation-game) .wf-map-card{border-radius:15px}
+ .app:has(.navigation-game) .wf-dpad{grid-template-columns:repeat(3,48px);grid-template-rows:48px 48px;gap:5px}
+ .app:has(.navigation-game) .wf-dpad button{width:48px;height:48px}
+ .app:has(.navigation-game) .wf-guidance{padding:13px}
+ .app:has(.navigation-game) .wf-route-summary{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:390px){.app:has(.navigation-game) .wf-dpad{grid-template-columns:repeat(3,44px);grid-template-rows:44px 44px}.app:has(.navigation-game) .wf-dpad button{width:44px;height:44px}.navigation-game-head h2{font-size:1.27rem}}
+@media(min-width:761px){.app main:not(:has(.staff-dashboard)):not(:has(.board-live)):has(.navigation-game){width:min(96vw,1500px)!important;max-width:1500px!important;margin:12px auto 22px!important}}
+/* Keep the game controls easy to see and tap, including for visitors with limited dexterity. */
+.app:has(.navigation-game) .h3d-game-button{min-height:48px;padding:9px 14px;font-size:.82rem}
+.app:has(.navigation-game) .h3d-floor-menu button{min-width:42px;min-height:42px;font-size:.9rem}
+@media(max-width:620px){
+ .app:has(.navigation-game) .h3d-viewport{min-height:430px}
+ .app:has(.navigation-game) .h3d-hud-bottom{grid-template-columns:88px minmax(0,1fr) auto;gap:7px}
+ .app:has(.navigation-game) .h3d-joystick{width:86px;height:86px}
+ .app:has(.navigation-game) .h3d-stick{width:42px;height:42px}
+ .app:has(.navigation-game) .h3d-floor-menu button{min-width:39px;min-height:39px}
+ .app:has(.navigation-game) .h3d-game-button{min-height:46px;padding:8px 9px;font-size:.76rem}
+}

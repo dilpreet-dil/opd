@@ -1,0 +1,65 @@
+{
+  "hospital": "City District Hospital (sample)",
+  "floors": [
+    { "id": "ground", "label": "Ground floor", "level": 0 },
+    { "id": "first", "label": "First floor", "level": 1 },
+    { "id": "second", "label": "Second floor", "level": 2 }
+  ],
+  "corridors": [
+    { "id": "ground-main", "floor": 0, "path": "M35 195 H805 M35 305 H805 M35 395 H805 M130 70 V575 M350 70 V575 M550 70 V575 M780 70 V575" },
+    { "id": "first-main", "floor": 1, "path": "M35 195 H805 M35 305 H805 M35 395 H805 M35 495 H520 M130 70 V575 M350 70 V575 M550 70 V575 M780 70 V575" },
+    { "id": "second-main", "floor": 2, "path": "M35 195 H805 M35 305 H805 M35 395 H805 M130 70 V575 M350 70 V575 M550 70 V575 M780 70 V575" }
+  ],
+  "rooms": [
+    { "id": "entrance", "name": "Main entrance", "type": "entrance", "floor": 0, "x": 70, "y": 315, "width": 110, "height": 52, "node": "gate", "landmark": "by the front gate" },
+    { "id": "registration", "name": "Registration counters", "type": "service", "floor": 0, "x": 220, "y": 110, "width": 130, "height": 58, "node": "registration", "landmark": "beside the main entrance" },
+    { "id": "help", "name": "Help desk", "type": "service", "floor": 0, "x": 400, "y": 110, "width": 110, "height": 58, "node": "help", "landmark": "opposite the blue chairs" },
+    { "id": "emergency", "name": "Emergency (Casualty)", "type": "emergency", "floor": 0, "x": 585, "y": 110, "width": 150, "height": 58, "node": "emergency", "landmark": "by the red sign" },
+    { "id": "laboratory", "name": "Laboratory", "type": "lab", "floor": 0, "x": 220, "y": 220, "width": 115, "height": 58, "node": "lab", "landmark": "beside the lift" },
+    { "id": "toilet0", "name": "Washrooms", "type": "amenity", "floor": 0, "x": 385, "y": 220, "width": 115, "height": 58, "node": "toilet0", "landmark": "near the lift" },
+    { "id": "lift0", "name": "Lift", "type": "vertical", "floor": 0, "x": 555, "y": 220, "width": 82, "height": 58, "node": "lift0", "landmark": "in the middle hall" },
+    { "id": "stairs0", "name": "Stairs", "type": "vertical", "floor": 0, "x": 680, "y": 220, "width": 82, "height": 58, "node": "stairs0", "landmark": "beside the lift" },
+    { "id": "pharmacy", "name": "Pharmacy", "type": "pharmacy", "floor": 0, "x": 585, "y": 315, "width": 120, "height": 52, "node": "pharmacy", "landmark": "next to the drinking water" },
+    { "id": "waitingA", "name": "Waiting hall A", "type": "amenity", "floor": 1, "x": 250, "y": 310, "width": 170, "height": 58, "node": "waitingA", "landmark": "opposite the blue chairs" },
+    { "id": "lift1", "name": "Lift", "type": "vertical", "floor": 1, "x": 555, "y": 220, "width": 82, "height": 58, "node": "lift1", "landmark": "in the middle hall" },
+    { "id": "stairs1", "name": "Stairs", "type": "vertical", "floor": 1, "x": 680, "y": 220, "width": 82, "height": 58, "node": "stairs1", "landmark": "beside the lift" },
+    { "id": "toilet1", "name": "Washrooms", "type": "amenity", "floor": 1, "x": 440, "y": 310, "width": 100, "height": 58, "node": "toilet1", "landmark": "near the waiting hall" },
+    { "id": "room1", "name": "OPD 1 · General Medicine", "type": "opd", "floor": 1, "x": 70, "y": 110, "width": 170, "height": 58, "node": "room1", "landmark": "third door on your left" },
+    { "id": "room2", "name": "OPD 2 · General Medicine", "type": "opd", "floor": 1, "x": 270, "y": 110, "width": 170, "height": 58, "node": "room2", "landmark": "second door on your left" },
+    { "id": "room3", "name": "OPD 3 · Children", "type": "opd", "floor": 1, "x": 470, "y": 110, "width": 170, "height": 58, "node": "room3", "landmark": "opposite the blue chairs" },
+    { "id": "room4", "name": "OPD 4 · Women and pregnancy", "type": "opd", "floor": 1, "x": 70, "y": 410, "width": 190, "height": 58, "node": "room4", "landmark": "next to the lift" },
+    { "id": "room5", "name": "OPD 5 · Bones and joints", "type": "opd", "floor": 1, "x": 280, "y": 410, "width": 185, "height": 58, "node": "room5", "landmark": "near the waiting hall" },
+    { "id": "room6", "name": "OPD 6 · Ear, nose and throat", "type": "opd", "floor": 1, "x": 480, "y": 410, "width": 205, "height": 58, "node": "room6", "landmark": "by the blue sign" },
+    { "id": "room7", "name": "OPD 7 · Eyes", "type": "opd", "floor": 1, "x": 70, "y": 510, "width": 165, "height": 58, "node": "room7", "landmark": "opposite the windows" },
+    { "id": "room8", "name": "OPD 8 · Skin", "type": "opd", "floor": 1, "x": 280, "y": 510, "width": 165, "height": 58, "node": "room8", "landmark": "beside the waiting hall" },
+    { "id": "lift2", "name": "Lift", "type": "vertical", "floor": 2, "x": 555, "y": 220, "width": 82, "height": 58, "node": "lift2", "landmark": "in the middle hall" },
+    { "id": "stairs2", "name": "Stairs", "type": "vertical", "floor": 2, "x": 680, "y": 220, "width": 82, "height": 58, "node": "stairs2", "landmark": "beside the lift" },
+    { "id": "ward4", "name": "Ward 4 · Medicine", "type": "ward", "floor": 2, "x": 100, "y": 110, "width": 175, "height": 58, "node": "ward4", "landmark": "opposite the blue chairs" },
+    { "id": "ward5", "name": "Ward 5 · Surgery", "type": "ward", "floor": 2, "x": 325, "y": 110, "width": 165, "height": 58, "node": "ward5", "landmark": "next to the nurses’ station" },
+    { "id": "ward6", "name": "Ward 6 · Children", "type": "ward", "floor": 2, "x": 535, "y": 110, "width": 165, "height": 58, "node": "ward6", "landmark": "near the lift" },
+    { "id": "nurses", "name": "Nurses’ station", "type": "service", "floor": 2, "x": 325, "y": 310, "width": 160, "height": 58, "node": "nurses", "landmark": "in the middle hall" }
+  ],
+  "doors": [
+    { "id": "main-door", "node": "gate", "side": "south" },
+    { "id": "registration-door", "node": "registration", "side": "west" },
+    { "id": "help-door", "node": "help", "side": "south" },
+    { "id": "emergency-door", "node": "emergency", "side": "west" },
+    { "id": "lab-door", "node": "lab", "side": "west" },
+    { "id": "toilet-ground-door", "node": "toilet0", "side": "west" },
+    { "id": "toilet-first-door", "node": "toilet1", "side": "west" },
+    { "id": "pharmacy-door", "node": "pharmacy", "side": "west" },
+    { "id": "room1-door", "node": "room1", "side": "south" },
+    { "id": "room2-door", "node": "room2", "side": "south" },
+    { "id": "room3-door", "node": "room3", "side": "south" },
+    { "id": "ward4-door", "node": "ward4", "side": "south" },
+    { "id": "ward5-door", "node": "ward5", "side": "south" },
+    { "id": "ward6-door", "node": "ward6", "side": "south" }
+  ],
+  "edges": [
+    ["gate","registration",18,"corridor"],["gate","help",15,"corridor"],["registration","help",12,"corridor"],["registration","lift0",30,"ramp"],["help","lift0",20,"corridor"],["lift0","lab",17,"corridor"],["lift0","toilet0",15,"corridor"],["lift0","emergency",35,"corridor"],["lift0","stairs0",8,"corridor"],["lift0","pharmacy",34,"corridor"],["gate","pharmacy",55,"corridor"],
+    ["lift0","lift1",15,"lift"],["lift1","lift2",15,"lift"],["stairs0","stairs1",18,"stairs"],["stairs1","stairs2",18,"stairs"],
+    ["lift1","waitingA",18,"corridor"],["waitingA","toilet1",15,"corridor"],["lift1","stairs1",8,"corridor"],
+    ["room1","lift1",24,"corridor"],["room2","lift1",18,"corridor"],["room3","lift1",16,"corridor"],["room4","lift1",20,"corridor"],["room5","lift1",16,"corridor"],["room6","lift1",20,"corridor"],["room7","lift1",27,"corridor"],["room8","lift1",24,"corridor"],
+    ["lift2","stairs2",8,"corridor"],["lift2","nurses",18,"corridor"],["nurses","ward4",20,"corridor"],["nurses","ward5",12,"corridor"],["nurses","ward6",20,"corridor"]
+  ]
+}
